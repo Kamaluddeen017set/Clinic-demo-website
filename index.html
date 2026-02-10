@@ -69,11 +69,13 @@
           <button id="themeToggle" class="icon-btn">
             <i class="fa-solid fa-moon"></i>
           </button>
-
+ </p>
+           
           <button id="hamburger  " class="icon-btn mobile-only">
             <i class="fa-solid fa-bars hidden"></i>
           </button>
-        </div>
+        </div> <button id="openBooking" class="btn-apoint"
+              >Book Appointment</button>
       </div>
     </header>
 
@@ -89,7 +91,9 @@
             <p>
               Advanced diagnostics, compassionate doctors and modern facilities.
             </p>
-            <a href="#appointment" class="btn primary">Book Appointment</a>
+            <a href="#appointment"  class="btn primary"
+              >Book Appointment</a
+            >
           </div>
         </div>
 
@@ -244,88 +248,100 @@
     </section>
 
     <!-- ================= APPOINTMENT ================= -->
-    <section id="appointment" class="section">
-      <h2 class="booking-title autoShow">Book an Appointment</h2>
-      <div class="booking-container fadeUp">
-        <!-- Progress bar -->
-        <div class="progressbar">
-          <div class="progress-step active">1</div>
-          <div class="progress-step">2</div>
-          <div class="progress-step">3</div>
-          <div class="progress-step">4</div>
+    <!-- ===================================================== -->
+    <!-- ================= BOOKING MODAL ===================== -->
+    <!-- ===================================================== -->
+
+    <div id="bookingModal" class="modal">
+      <div class="modal-overlay"></div>
+
+      <div class="modal-card">
+        <!-- Close -->
+        <button id="closeModal" class="close-btn">✕</button>
+
+        <!-- Stepper -->
+        <div class="stepper">
+          <div class="step active">Service</div>
+          <div class="step">Doctor</div>
+          <div class="step">Date</div>
+          <div class="step">Details</div>
+          <div class="step">Confirm</div>
         </div>
 
-        <!-- Step 1: Service Selection -->
-        <div class="step active" data-step="1">
-          <select id="service">
-            <option value="">Select Service</option>
-            <option value="Consultation">Consultation</option>
-            <option value="Lab Test">Lab Test</option>
-            <option value="Pharmacy Pickup">Pharmacy Pickup</option>
-          </select>
-          <input
-            type="text"
-            id="reason"
-            placeholder="Reason for visit (optional)"
-          />
-          <div class="buttons">
-            <button class="cancel">Cancel</button>
-            <button class="next">Next Step</button>
+        <!-- Content -->
+        <form id="bookingForm" class="form-body">
+          <!-- STEP 1 -->
+          <div class="form-step active">
+            <h2>Select Department</h2>
+            <div class="grid">
+              <button type="button" class="select-card">
+                General Medicine
+              </button>
+              <button type="button" class="select-card">Cardiology</button>
+              <button type="button" class="select-card">Laboratory</button>
+              <button type="button" class="select-card">Radiology</button>
+            </div>
           </div>
-        </div>
 
-        <!-- Step 2: Date & Time -->
-        <div class="step" data-step="2">
-          <input type="date" id="date" />
-          <input type="time" id="time" />
-          <div class="buttons">
-            <button class="cancel">Cancel</button>
-            <button class="next">Next Step</button>
+          <!-- STEP 2 -->
+          <div class="form-step">
+            <h2>Select Doctor</h2>
+            <select required class="input">
+              <option value="">Choose doctor</option>
+              <option>Dr. Ahmed Musa</option>
+              <option>Dr. Mary Okeke</option>
+              <option>Dr. James Bello</option>
+            </select>
           </div>
-        </div>
 
-        <!-- Step 3: Patient Details -->
-        <div class="step" data-step="3">
-          <input type="text" id="name" placeholder="Patient Name" />
-          <input type="tel" id="phone" placeholder="Phone Number" />
-          <div class="buttons">
-            <button class="cancel">Cancel</button>
-            <button class="next">Next Step</button>
+          <!-- STEP 3 -->
+          <div class="form-step">
+            <h2>Date & Time</h2>
+            <input type="date" required class="input" />
+            <input type="time" required class="input" />
           </div>
-        </div>
 
-        <!-- Step 4: Confirmation -->
-        <div class="step" data-step="4">
-          <div class="success">
-            <div class="checkmark">✔</div>
-            <p>Appointment booked successfully!</p>
+          <!-- STEP 4 -->
+          <div class="form-step">
+            <h2>Patient Details</h2>
+            <input type="text" placeholder="Full Name" required class="input" />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              required
+              class="input"
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              required
+              class="input"
+            />
           </div>
-          <div class="buttons">
-            <button class="cancel">Book Another</button>
+
+          <!-- STEP 5 -->
+          <div class="form-step confirm">
+            <h2>Confirm Appointment</h2>
+            <p>Please review and submit your booking.</p>
           </div>
-        </div>
+
+          <!-- Success -->
+          <div class="success-screen">
+            <h2>Appointment Confirmed</h2>
+            <p>Your visit has been scheduled successfully.</p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="actions">
+            <button type="button" id="prevBtn" class="btn-secondary">
+              Back
+            </button>
+            <button type="button" id="nextBtn" class="btn-apoint">Next</button>
+          </div>
+        </form>
       </div>
-    </section>
+    </div>
 
-    <!-- ================= FAQ ================= -->
-    <section class="section alt">
-      <div class="container faq fadeUp">
-        <h2 class="section-title autoShow">Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-          <button>How do I get lab results?</button>
-          <p>Access through your secure patient portal.</p>
-        </div>
-        <div class="faq-item">
-          <button>Do you accept insurance?</button>
-          <p>Yes, most major providers.</p>
-        </div>
-        <div class="faq-item">
-          <button>Is emergency service available?</button>
-          <p>Yes, 24/7.</p>
-        </div>
-      </div>
-    </section>
     <!-- ================= WHY CHOOSE US ================= -->
     <section class="section">
       <div class="container">
@@ -466,7 +482,7 @@
       <div class="container">
         <h2 class="section-title autoShow">Clinic Gallery</h2>
 
-        <div class="grid-4 gallery imageReveal">
+        <div class="grid-4 gallery fadeUp">
           <img
             src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2000"
             class="zoomable"

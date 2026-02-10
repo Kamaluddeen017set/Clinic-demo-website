@@ -76,49 +76,82 @@ const topBtn = document.getElementById("backToTop");
 topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 /* ================= FORM VALIDATION ================= */
-const steps = document.querySelectorAll(".step");
-const progressSteps = document.querySelectorAll(".progress-step");
-const nextBtns = document.querySelectorAll(".next");
-const cancelBtns = document.querySelectorAll(".cancel");
-let currentStep = 0;
+const modal = document.getElementById("bookingModal");
+const openBtn = document.getElementById("openBooking");
+const closeBtn = document.getElementById("closeModal");
+const overlay = document.querySelector(".modal-overlay");
 
-// Show active step
-function showStep(index) {
-  steps.forEach((s) => s.classList.remove("active"));
-  steps[index].classList.add("active");
+const steps = document.querySelectorAll(".form-step");
+const stepper = document.querySelectorAll(".step");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+const successScreen = document.querySelector(".success-screen");
 
-  progressSteps.forEach((p, i) => {
-    p.classList.remove("active", "completed");
-    if (i < index) p.classList.add("completed");
-    if (i === index) p.classList.add("active");
-  });
+let current = 0;
+
+/* ===== MODAL OPEN/CLOSE ===== */
+function openModal() {
+  modal.classList.add("show");
 }
 
-nextBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    if (currentStep < steps.length - 1) {
-      currentStep++;
-      showStep(currentStep);
-      if (currentStep === steps.length - 1) {
-        // Show success
-        document.querySelector(".success").style.display = "flex";
-        // TODO: send data to Email or WhatsApp
-        // Example: EmailJS or wa.me link
-      }
-    }
-  });
+function closeModal() {
+  modal.classList.remove("show");
+  resetForm();
+}
+
+openBtn.onclick = openModal;
+closeBtn.onclick = closeModal;
+overlay.onclick = closeModal;
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeModal();
 });
 
-cancelBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    currentStep = 0;
-    showStep(currentStep);
-    document.querySelector(".success").style.display = "none";
-    document.querySelectorAll("input, select").forEach((i) => (i.value = ""));
-  });
-});
+/* ===== STEPS ===== */
+function showStep(i) {
+  steps.forEach((s) => s.classList.remove("active"));
+  stepper.forEach((s) => s.classList.remove("active"));
 
-showStep(currentStep);
+  steps[i].classList.add("active");
+  stepper[i].classList.add("active");
+
+  prevBtn.style.display = i === 0 ? "none" : "inline-block";
+  nextBtn.textContent = i === steps.length - 1 ? "Confirm" : "Next";
+}
+
+nextBtn.onclick = () => {
+  if (current < steps.length - 1) {
+    current++;
+    showStep(current);
+  } else {
+    finish();
+  }
+};
+
+prevBtn.onclick = () => {
+  if (current > 0) {
+    current--;
+    showStep(current);
+  }
+};
+
+function finish() {
+  steps.forEach((s) => (s.style.display = "none"));
+  document.querySelector(".actions").style.display = "none";
+  successScreen.classList.add("show");
+}
+
+function resetForm() {
+  current = 0;
+  successScreen.classList.remove("show");
+  steps.forEach((s) => {
+    s.style.display = "";
+  });
+  document.querySelector(".actions").style.display = "flex";
+  showStep(0);
+}
+
+showStep(0);
 
 /* ================= MOBILE MENU ================= */
 const hamburger = document.getElementById("hamburger");
