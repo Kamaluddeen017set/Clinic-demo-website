@@ -77,7 +77,7 @@ topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 /* ================= FORM VALIDATION ================= */
 const modal = document.getElementById("bookingModal");
-const openBtn = document.getElementById("openBooking");
+const openBtn = document.querySelectorAll(".openBooking");
 const closeBtn = document.getElementById("closeModal");
 const overlay = document.querySelector(".modal-overlay");
 
@@ -99,7 +99,8 @@ function closeModal() {
   resetForm();
 }
 
-openBtn.onclick = openModal;
+// openBtn.onclick = openModal;
+openBtn.forEach((btn) => (btn.onclick = openModal));
 closeBtn.onclick = closeModal;
 overlay.onclick = closeModal;
 
