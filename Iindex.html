@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Medical Center | Clinic • Lab • Pharmacy</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ================= PRELOADER ================= -->
+    <div id="preloader">
+      <div class="loader-circle"></div>
+    </div>
+
+    <!-- Floating shapes -->
+    <div class="bg-blob blob1"></div>
+    <div class="bg-blob blob2"></div>
+
+    <!-- ================= TOP BAR ================= -->
+    <div class="topbar">
+      <div class="container flex-between">
+        <div>
+          <i class="fa-solid fa-phone"></i> +234 800 000 0000
+          <span class="divider"></span>
+          <i class="fa-solid fa-envelope"></i> care@demo.com
+        </div>
+        <div>
+          <span><i class="fa-solid fa-clock"></i> Open 24/7</span>
+          <span class="divider"></span>
+          <span class="hotline"
+            ><i class="fa-solid fa-triangle-exclamation"></i> Emergency:
+            112</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar glass">
+      <div class="container nav-wrapper">
+        <div class="logo"><i class="fa-solid fa-heart-pulse"></i> Demo</div>
+
+        <nav id="navMenu">
+          <a href="#home">Home</a>
+          <a href="#services">Departments</a>
+          <a href="#doctors">Doctors</a>
+          <a href="#appointment">Appointment</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="themeToggle" class="icon-btn">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+          <button id="hamburger  " class="icon-btn mobile-only">
+            <i class="fa-solid fa-bars hidden"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= HERO SLIDER ================= -->
+    <section id="home" class="hero">
+      <div class="slides">
+        <div
+          class="slide active"
+          style="background-image: url(&quot;/image/image3.jpg&quot;)"
+        >
+          <div class="hero-content">
+            <h1>Premium Healthcare You Can Trust</h1>
+            <p>
+              Advanced diagnostics, compassionate doctors and modern facilities.
+            </p>
+            <a href="#appointment" class="btn primary">Book Appointment</a>
+          </div>
+        </div>
+
+        <div
+          class="slide"
+          style="background-image: url(&quot;/image/image1.jpg&quot;)"
+        >
+          <div class="hero-content">
+            <h1>Modern Laboratory & Accurate Results</h1>
+            <p>Fast testing, reliable reports, secure online access.</p>
+            <a href="#" class="btn primary">Check Test Results</a>
+          </div>
+        </div>
+
+        <div
+          class="slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2000&quot;);
+          "
+        >
+          <div class="hero-content">
+            <h1>Complete Pharmacy & Medicine Store</h1>
+            <p>Authentic drugs, professional pharmacists, doorstep delivery.</p>
+            <a href="#pharmacy" class="btn primary">Explore Pharmacy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title autoShow">Our Departments</h2>
+
+        <div class="grid-4 fadeUp">
+          <div class="card glass reveal">
+            <i class="fa-solid fa-flask"></i>
+            <h3>Laboratory</h3>
+          </div>
+          <div class="card glass reveal">
+            <i class="fa-solid fa-pills"></i>
+            <h3>Pharmacy</h3>
+          </div>
+          <div class="card glass reveal">
+            <i class="fa-solid fa-stethoscope"></i>
+            <h3>Consultation</h3>
+          </div>
+          <div class="card glass reveal">
+            <i class="fa-solid fa-x-ray"></i>
+            <h3>Radiology</h3>
+          </div>
+          <div class="card glass reveal">
+            <i class="fa-solid fa-heart"></i>
+            <h3>Cardiology</h3>
+          </div>
+          <div class="card glass reveal">
+            <i class="fa-solid fa-ambulance"></i>
+            <h3>Emergency</h3>
+          </div>
+          <div class="card glass reveal">
+            <i class="fa-solid fa-vials"></i>
+            <h3>Diagnostics</h3>
+          </div>
+          <div class="card glass reveal">
+            <i class="fa-solid fa-user-nurse"></i>
+            <h3>Nursing Care</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT + STATS ================= -->
+    <section class="section about">
+      <div class="container about-grid">
+        <img
+          class="imageReveal"
+          src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=2000"
+        />
+
+        <div class="autoShow">
+          <h2>World-Class Private Medical Center</h2>
+          <br />
+          <p>
+            we believe healthcare is more than tests and treatments it’s about
+            people, trust, and timely care.<br /><br />
+
+            Every patient who walks through our doors is treated with dignity,
+            compassion, and attention to detail.<br /><br />
+            Our clinic combines qualified professionals, modern diagnostic
+            practices, and a patient-first approach to ensure accurate results
+            and quality care. We understand that behind every test is a person
+            seeking answers, reassurance, and hope — and we take that
+            responsibility seriously.<br /><br />
+            Your health matters. Your time matters. And your peace of mind is
+            our priority.
+          </p>
+
+          <div class="stats">
+            <div>
+              <h3 class="counter" data-target="15000">0</h3>
+              <span>Patients</span>
+            </div>
+            <div>
+              <h3 class="counter" data-target="45">0</h3>
+              <span>Doctors</span>
+            </div>
+            <div>
+              <h3 class="counter" data-target="24">0</h3>
+              <span>Hours Care</span>
+            </div>
+            <div>
+              <h3 class="counter" data-target="12">0</h3>
+              <span>Departments</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DOCTORS ================= -->
+    <section id="doctors" class="section">
+      <div class="container">
+        <h2 class="section-title autoShow">Medical Specialists</h2>
+
+        <div class="grid-4 fadeUp">
+          <div class="doctor card glass reveal">
+            <img src="image/side-view-muslim-woman-posing-outdoors.jpg" />
+            <h4>Dr. Sarah Mustapha</h4>
+            <span>Cardiologist</span>
+          </div>
+          <div class="doctor card glass reveal">
+            <img src="/image/doctor-with-gadget.jpg" />
+            <h4>Dr. Ahmed Musa</h4>
+            <span>Lab Scientist</span>
+          </div>
+          <div class="doctor card glass reveal">
+            <img
+              src="image/young-female-musllim-african-clinician-doctor-scrubs-using-touchpad-while-communicating-with-patients-online.jpg"
+            />
+            <h4>Dr. Rahma Kabir</h4>
+            <span>Pediatrician</span>
+          </div>
+          <div class="doctor card glass reveal">
+            <img
+              src="/image/portrait-african-american-practitioner-doctor-working-hospital-office.jpg"
+            />
+            <h4>Dr. James Brown</h4>
+            <span>Radiologist</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= APPOINTMENT ================= -->
+    <section id="appointment" class="section">
+      <h2 class="booking-title autoShow">Book an Appointment</h2>
+      <div class="booking-container fadeUp">
+        <!-- Progress bar -->
+        <div class="progressbar">
+          <div class="progress-step active">1</div>
+          <div class="progress-step">2</div>
+          <div class="progress-step">3</div>
+          <div class="progress-step">4</div>
+        </div>
+
+        <!-- Step 1: Service Selection -->
+        <div class="step active" data-step="1">
+          <select id="service">
+            <option value="">Select Service</option>
+            <option value="Consultation">Consultation</option>
+            <option value="Lab Test">Lab Test</option>
+            <option value="Pharmacy Pickup">Pharmacy Pickup</option>
+          </select>
+          <input
+            type="text"
+            id="reason"
+            placeholder="Reason for visit (optional)"
+          />
+          <div class="buttons">
+            <button class="cancel">Cancel</button>
+            <button class="next">Next Step</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Date & Time -->
+        <div class="step" data-step="2">
+          <input type="date" id="date" />
+          <input type="time" id="time" />
+          <div class="buttons">
+            <button class="cancel">Cancel</button>
+            <button class="next">Next Step</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Patient Details -->
+        <div class="step" data-step="3">
+          <input type="text" id="name" placeholder="Patient Name" />
+          <input type="tel" id="phone" placeholder="Phone Number" />
+          <div class="buttons">
+            <button class="cancel">Cancel</button>
+            <button class="next">Next Step</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Confirmation -->
+        <div class="step" data-step="4">
+          <div class="success">
+            <div class="checkmark">✔</div>
+            <p>Appointment booked successfully!</p>
+          </div>
+          <div class="buttons">
+            <button class="cancel">Book Another</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section alt">
+      <div class="container faq fadeUp">
+        <h2 class="section-title autoShow">FAQs</h2>
+
+        <div class="faq-item">
+          <button>How do I get lab results?</button>
+          <p>Access through your secure patient portal.</p>
+        </div>
+        <div class="faq-item">
+          <button>Do you accept insurance?</button>
+          <p>Yes, most major providers.</p>
+        </div>
+        <div class="faq-item">
+          <button>Is emergency service available?</button>
+          <p>Yes, 24/7.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title autoShow">Why Choose (Clinic Name)</h2>
+
+        <div class="grid-4 fadeUp">
+          <div class="feature glass reveal">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h4>Certified Specialists</h4>
+            <p>
+              Highly experienced consultants and surgeons with global training.
+            </p>
+          </div>
+
+          <div class="feature glass reveal">
+            <i class="fa-solid fa-microscope"></i>
+            <h4>Advanced Equipment</h4>
+            <p>
+              Modern diagnostic lab and imaging technology for precise results.
+            </p>
+          </div>
+
+          <div class="feature glass reveal">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h4>Patient Safety</h4>
+            <p>
+              International hygiene standards and strict clinical protocols.
+            </p>
+          </div>
+
+          <div class="feature glass reveal">
+            <i class="fa-solid fa-clock"></i>
+            <h4>24/7 Availability</h4>
+            <p>Round-the-clock emergency response and pharmacy services.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="section newsletter">
+      <div class="container newsletter-inner glass">
+        <div>
+          <h3>Get Health Tips & Updates</h3>
+          <p>Join our newsletter for wellness advice and clinic news.</p>
+        </div>
+
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required />
+          <button class="btn primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="section alt">
+      <div class="container">
+        <h2 class="section-title autoShow">What Our Patients Say</h2>
+
+        <div class="testimonial-wrapper">
+          <div class="testimonial-track">
+            <div class="testimonial-card glass">
+              <p>
+                “Exceptional service and very professional doctors. The lab
+                results were fast and accurate.”
+              </p>
+              <h4>— Aisha Ibrahim</h4>
+            </div>
+
+            <div class="testimonial-card glass">
+              <p>
+                “Clean environment, modern equipment, and caring nurses. Truly
+                world-class care.”
+              </p>
+              <h4>— Michael Okeke</h4>
+            </div>
+
+            <div class="testimonial-card glass">
+              <p>
+                “Affordable pharmacy prices and authentic medicines. Highly
+                recommended.”
+              </p>
+              <h4>— Fatima Yusuf</h4>
+            </div>
+
+            <div class="testimonial-card glass">
+              <p>
+                “The staff were patient and respectful. I felt truly cared for.”
+              </p>
+              <h4>— Sadiq Bello</h4>
+            </div>
+            <div class="testimonial-card glass">
+              <p>
+                “Exceptional service and very professional doctors. The lab
+                results were fast and accurate.”
+              </p>
+              <h4>— Aisha Ibrahim</h4>
+            </div>
+
+            <div class="testimonial-card glass">
+              <p>
+                “Clean environment, modern equipment, and caring nurses. Truly
+                world-class care.”
+              </p>
+              <h4>— Michael Okeke</h4>
+            </div>
+
+            <div class="testimonial-card glass">
+              <p>
+                “Affordable pharmacy prices and authentic medicines. Highly
+                recommended.”
+              </p>
+              <h4>— Fatima Yusuf</h4>
+            </div>
+
+            <div class="testimonial-card glass">
+              <p>
+                “The staff were patient and respectful. I felt truly cared for.”
+              </p>
+              <h4>— Sadiq Bello</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-controls">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title autoShow">Clinic Gallery</h2>
+
+        <div class="grid-4 gallery imageReveal">
+          <img
+            src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2000"
+            class="zoomable"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2000"
+            class="zoomable"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=2000"
+            class="zoomable"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=2000"
+            class="gallery-img reveal zoomable"
+          />
+          <img
+            class="gallery-img reveal zoomable"
+            src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=2000"
+          />
+          <img class="gallery-img reveal zoomable" src="image/image2.jpg" />
+          <img
+            class="gallery-img reveal zoomable"
+            src="image/man-working-as-paediatrician.jpg"
+          />
+          <img
+            class="gallery-img reveal zoomable"
+            src="image/friendly-afro-american-doctor-holding-clipboard-smiling-camera-isolated-gray-background.jpg"
+          />
+          <img class="gallery-img reveal zoomable" src="image/1579.jpg" />
+          <img
+            class="gallery-img reveal zoomable"
+            src="image/specialist-female-doctor-using-hand-sanitizer.jpg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BLOG ================= -->
+    <section class="section alt">
+      <div class="container autoShow">
+        <h2 class="section-title">Health Tips & Articles</h2>
+
+        <div class="grid-3">
+          <div class="blog-card glass reveal">
+            <img
+              src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2000"
+            />
+            <div class="blog-body">
+              <h4>Preventive Health Checkups</h4>
+              <p>Why annual screening helps detect diseases early.</p>
+            </div>
+          </div>
+
+          <div class="blog-card glass reveal">
+            <img
+              src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=2000"
+              class="zoomable"
+            />
+            <div class="blog-body">
+              <h4>Managing Diabetes Safely</h4>
+              <p>Tips for diet, exercise and medication adherence.</p>
+            </div>
+          </div>
+
+          <div class="blog-card glass reveal">
+            <img
+              src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=2000"
+            />
+            <div class="blog-body">
+              <h4>Family Vaccination Guide</h4>
+              <p>Essential vaccines for children and adults.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INSURANCE ================= -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title autoShow">Insurance Partners</h2>
+
+        <div class="partners">
+          <div class="glass partner">
+            <img src="image/AXA.png" />
+            <p>AXA</p>
+          </div>
+          <div class="glass partner">
+            <img src="image/Aetna.png" />
+            <p>Aetna</p>
+          </div>
+          <div class="glass partner">
+            <img src="image/NHIS.jpg" />
+            <p>NHIS</p>
+          </div>
+          <div class="glass partner">
+            <img src="image/Bupa.png" />
+            <p>Bupa</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EMERGENCY CTA ================= -->
+    <section class="emergency">
+      <div class="container emergency-inner">
+        <h2>Medical Emergency? We're Available 24/7</h2>
+        <a href="tel:112" class="btn emergency-btn">Call Emergency Now</a>
+      </div>
+    </section>
+    <!-- ================= OPENING HOURS ================= -->
+    <section class="section alt">
+      <div class="container">
+        <h2 class="section-title autoShow">Opening Hours</h2>
+
+        <div class="hours glass fadeUp">
+          <div class="row">
+            <span>Monday – Friday</span><strong>8:00 AM – 10:00 PM</strong>
+          </div>
+          <div class="row">
+            <span>Saturday</span><strong>9:00 AM – 8:00 PM</strong>
+          </div>
+          <div class="row">
+            <span>Sunday</span><strong>10:00 AM – 6:00 PM</strong>
+          </div>
+          <div class="row emergency-row">
+            <span>Emergency & Pharmacy</span><strong>24/7</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRUST BADGES ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="badges autoShow">
+          <div class="badge glass">
+            <i class="fa-solid fa-certificate"></i> ISO Certified
+          </div>
+          <div class="badge glass">
+            <i class="fa-solid fa-award"></i> Award Winning Care
+          </div>
+          <div class="badge glass">
+            <i class="fa-solid fa-user-shield"></i> Data Privacy Compliant
+          </div>
+          <div class="badge glass">
+            <i class="fa-solid fa-star"></i> 5★ Patient Rating
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= IMAGE LIGHTBOX ================= -->
+    <div id="lightbox" class="lightbox">
+      <img id="lightboxImg" />
+    </div>
+    <!-- ================= FOOTER ================= -->
+    <!-- ================= SEARCH DOCTOR / SERVICE ================= -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title autoShow">Find a Doctor or Service</h2>
+
+        <div class="search-box glass">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            id="liveSearch"
+            type="text"
+            placeholder="Search doctor, department, or service..."
+          />
+        </div>
+
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </section>
+
+    <!-- ================= QUICK ACTION CARDS ================= -->
+    <section class="section alt">
+      <div class="container">
+        <div class="quick-actions fadeUp">
+          <a href="#appointment" class="qa-card glass">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book Visit</span>
+          </a>
+
+          <a href="#" class="qa-card glass">
+            <i class="fa-solid fa-file-waveform"></i>
+            <span>View Results</span>
+          </a>
+
+          <a href="tel:112" class="qa-card glass urgent">
+            <i class="fa-solid fa-truck-medical"></i>
+            <span>Emergency</span>
+          </a>
+
+          <a href="#pharmacy" class="qa-card glass">
+            <i class="fa-solid fa-capsules"></i>
+            <span>Buy Medicine</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ================= COOKIE CONSENT ================= -->
+    <div id="cookieBanner" class="cookie glass">
+      <p>
+        We use cookies to improve your experience and ensure secure healthcare
+        services.
+      </p>
+      <button id="acceptCookies" class="btn primary">Accept</button>
+    </div>
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section">
+      <div class="container contact-grid autoShow">
+        <div>
+          <h2>Contact Us</h2>
+          <p>163 Healthcare Avenue, Kano, Nigeria</p>
+          <p>Email: care@demo.com</p>
+          <p>Phone: +234 800 000 0000</p>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124888.47152604883!2d8.454718934645292!3d11.990774408142286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae80eff0fff3f1%3A0x85ff8700a3da54eb!2sKano!5e0!3m2!1sen!2sng!4v1770690593795!5m2!1sen!2sng"
+        ></iframe>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        © 2026 (Clinic Name) Medical Center. All Rights Reserved.
+      </div>
+    </footer>
+
+    <!-- Floating buttons -->
+    <a id="backToTop"><i class="fa-solid fa-arrow-up"></i></a>
+    <a href="https://wa.me/2348000000000" class="whatsapp"
+      ><i class="fa-brands fa-whatsapp"></i
+    ></a>
+    <!-- ================= FLOATING LIVE CHAT / WHATSAPP ================= -->
+    <div id="chatWidget" class="chat-widget glass">
+      <div class="chat-header">
+        <i class="fa-brands fa-whatsapp"></i> Chat with us
+        <span id="chatClose" class="chat-close">&times;</span>
+      </div>
+      <div class="chat-body">
+        <p>Hi! How can we help you today?</p>
+        <input type="text" placeholder="Type your message..." />
+        <button class="btn primary">Send</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
